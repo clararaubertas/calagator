@@ -2,7 +2,7 @@
 ----------------------------------------*/
 
 body {
-  background: #CEF9FE;
+  background: #CEF9FE url('/images/noise.png');
 }
 
 a {
@@ -10,7 +10,7 @@ a {
 }
 
 #global_header {
-  background: #B8EFFE;
+  background: #B8EFFE url('/images/noise.png');
   position: relative;
   height: 95px;
 }
@@ -20,7 +20,7 @@ a {
 }
 
 #top_footer {
-  background: #CEF9FE;
+  background: #CEF9FE url('/images/noise.png');
   color: #333333;
   padding: .5em 30px .5em 40px;
   font-size: 70%;
@@ -89,7 +89,7 @@ a {
 
 .subnav {
   font-size: 1.2em;
-  background: #cbfab4;
+  background: #cbfab4 url('/images/noise.png');
   padding-left: 40px;
   line-height: 2em;
   -moz-box-shadow:5px 0px 0px #000000;
@@ -183,7 +183,7 @@ a {
   box-shadow:0px 0px 5px #000000;
 }
 
-#list_items { 
+#list_items {
   background: #fff;
   margin-right: 20em;
   -moz-border-radius:20px;
