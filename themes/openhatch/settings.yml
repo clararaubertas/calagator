@@ -8,7 +8,7 @@ tagline: "Open source meetups and training events"
 url: 'http://events.openhatch.org/'
 
 # Default timezone, run "rake -D time" for information on how to display known timezones:
-timezone: 'Pacific Time (US & Canada)'
+timezone: 'UTC'
 
 # Google map to display on /venues page:
 venues_google_map_options:
