@@ -84,8 +84,10 @@ class EventsController < ApplicationController
     @event.associate_with_venue(venue_ref(params))
     has_new_venue = @event.venue && @event.venue.new_record?
 
-    @event.start_time = params[:start_date], params[:start_time]
-    @event.end_time = params[:end_date], params[:end_time]
+    Time.zone = params[:start_time_zone]
+    @event.start_time = params[:start_date], Time.zone.parse(params[:start_time])
+    Time.zone = params[:end_time_zone]
+    @event.end_time = params[:end_date], Time.zone.parse(params[:end_time])
 
     if evil_robot = params[:trap_field].present?
       flash[:failure] = "<h3>Evil Robot</h3> We didn't create this event because we think you're an evil robot. If you're really not an evil robot, look at the form instructions more carefully. If this doesn't work please file a bug report and let us know."
@@ -118,8 +120,11 @@ class EventsController < ApplicationController
     @event.associate_with_venue(venue_ref(params))
     has_new_venue = @event.venue && @event.venue.new_record?
 
-    @event.start_time = params[:start_date], params[:start_time]
-    @event.end_time = params[:end_date], params[:end_time]
+    Time.zone = params[:start_time_zone]
+    @event.start_time = params[:start_date], Time.zone.parse(params[:start_time])
+    Time.zone = params[:end_time_zone]
+    @event.end_time = params[:end_date], Time.zone.parse(params[:end_time])
+
 
     if evil_robot = !params[:trap_field].blank?
       flash[:failure] = "<h3>Evil Robot</h3> We didn't update this event because we think you're an evil robot. If you're really not an evil robot, look at the form instructions more carefully. If this doesn't work please file a bug report and let us know."

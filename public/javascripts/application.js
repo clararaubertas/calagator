@@ -13,3 +13,15 @@ $(document).ready(function(){
     $e = event;
   });
 });
+
+include('detect-timezone.js');
+include('jquery-cookie.js');
+
+
+
+<!-- Set timezone cookie -->
+if(!($.cookie('timezone'))) {
+   current_time = new Date();
+   $.cookie('timezone', jstz.determine_timezone().name(), { path: '/', expires: 10 } );
+}
+

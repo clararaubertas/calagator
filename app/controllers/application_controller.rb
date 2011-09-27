@@ -2,6 +2,13 @@
 # Likewise, all the methods added will be available for all controllers.
 
 class ApplicationController < ActionController::Base
+
+  before_filter :set_timezone
+
+  def set_timezone
+    Time.zone = cookies[:timezone]
+  end
+ 
   helper :all # include all helpers, all the time
 
   # See ActionController::RequestForgeryProtection for details
