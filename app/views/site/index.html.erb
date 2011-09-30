@@ -17,9 +17,9 @@
 </div>
 
 <div id="whats_happening">
-  <div style="text-align: center; width: 300px; background-color: yellow;">Note: This page shows you times in
-    Universal Corrected Time. You can see the current time in UTC at
-    <a href="http://www.timeanddate.com/worldclock/">timeanddate.com</a>.</div>
+  <div style="text-align: center; width: 300px; background-color: yellow;">Note: This page tries to show you times in
+    your local time. Right now, we think your local time is <%= Time.zone.now.strftime("%I:%M %p %Z") %>.
+</div>
 
   <h1>What's happening?</h1>
   <div id='coming_events'>

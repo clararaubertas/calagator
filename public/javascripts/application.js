@@ -14,14 +14,15 @@ $(document).ready(function(){
   });
 });
 
-include('detect-timezone.js');
-include('jquery-cookie.js');
+document.write("<script type='text/javascript' src='/javascripts/detect-timezone.js' ></script>");
+document.write("<script type='text/javascript' src='/javascripts/jquery-cookie.js' ></script>");
 
 
 
-<!-- Set timezone cookie -->
-if(!($.cookie('timezone'))) {
-   current_time = new Date();
-   $.cookie('timezone', jstz.determine_timezone().name(), { path: '/', expires: 10 } );
-}
+document.write("<!-- Set timezone cookie -->");
+document.write("<script type='text/javascript'>");
+document.write("if(!($.cookie('timezone'))) {");
+document.write("current_time = new Date();");
+document.write("$.cookie('timezone', jstz.determine_timezone().name(), { path: '/', expires: 10 } );};");
+document.write("</script>");
 
