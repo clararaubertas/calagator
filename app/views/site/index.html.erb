@@ -1,6 +1,6 @@
 <% tabindex_on '#search_field' %>
 
-<% cache(CacheObserver.daily_key_for("site_index", request)) do %>
+
 <% @times_to_events ||= @times_to_events_deferred.call %>
 <a href="#" id="homepage_sidebar_toggle" class="expander_toggle">Hi there. Learn about this site and how to use it...</a>
 <div id="homepage_sidebar">
@@ -15,7 +15,7 @@
         }.join('<span class="spacer"> &middot; </span>') -%>
   </div>
 </div>
-<% end %>
+
 
 <div id="whats_happening">
   <div style="text-align: center; width: 300px; background-color: yellow;">Note: This page tries to show you times in
