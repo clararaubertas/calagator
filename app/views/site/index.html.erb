@@ -15,6 +15,7 @@
         }.join('<span class="spacer"> &middot; </span>') -%>
   </div>
 </div>
+<% end %>
 
 <div id="whats_happening">
   <div style="text-align: center; width: 300px; background-color: yellow;">Note: This page tries to show you times in
@@ -36,4 +37,4 @@
     <h3><%= link_to("View future events &raquo;", events_path(:anchor => "event-#{@times_to_events[:more].id}")) if @times_to_events[:more] %></h3>
   </div>
 </div>
-<% end %>
+
